@@ -1,0 +1,11 @@
+# built app
+Excalidraw.app/
+app-wrapper/Excalidraw
+
+# live canvas state (your drawings)
+canvas-data/
+
+.DS_Store
+
+# private board config (real project names)
+board/layout.local.json

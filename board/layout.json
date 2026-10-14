@@ -1,0 +1,157 @@
+{
+  "canvasUrl": "http://127.0.0.1:3456",
+  "sticky": {
+    "w": 160,
+    "h": 90,
+    "fontSize": 14
+  },
+  "companies": {
+    "p1": {
+      "name": "Project 1",
+      "fill": "#ffec99",
+      "stroke": "#f08c00"
+    },
+    "p2": {
+      "name": "Project 2",
+      "fill": "#a5d8ff",
+      "stroke": "#1971c2"
+    },
+    "p3": {
+      "name": "Project 3",
+      "fill": "#ffc9c9",
+      "stroke": "#e03131"
+    },
+    "p4": {
+      "name": "Project 4",
+      "fill": "#dee2e6",
+      "stroke": "#495057"
+    },
+    "p5": {
+      "name": "Project 5",
+      "fill": "#b2f2bb",
+      "stroke": "#2f9e44"
+    },
+    "p6": {
+      "name": "Project 6",
+      "fill": "#ffd8a8",
+      "stroke": "#e8590c"
+    },
+    "personal": {
+      "name": "Personal",
+      "fill": "#d0bfff",
+      "stroke": "#7048e8"
+    }
+  },
+  "zones": {
+    "week": {
+      "x": 40,
+      "y": 160,
+      "w": 900,
+      "h": 260
+    },
+    "today": {
+      "x": 980,
+      "y": 160,
+      "w": 1380,
+      "h": 260
+    },
+    "backlog": {
+      "x": 40,
+      "y": 460,
+      "w": 900,
+      "h": 1680
+    },
+    "kanban": {
+      "x": 980,
+      "y": 460,
+      "w": 1380,
+      "h": 1680
+    },
+    "icebox": {
+      "x": 40,
+      "y": 2180,
+      "w": 2320,
+      "h": 330
+    }
+  },
+  "week": {
+    "slotY": 250,
+    "slotX0": 60,
+    "slotStep": 175,
+    "slots": 5
+  },
+  "today": {
+    "slotY": 250,
+    "slotX0": 1000,
+    "slotStep": 175,
+    "slots": 3,
+    "blocks": [
+      {
+        "x": 1560,
+        "label": "AM focus\n9:00 - 12:00"
+      },
+      {
+        "x": 1820,
+        "label": "PM focus\n13:00 - 16:00"
+      },
+      {
+        "x": 2080,
+        "label": "Admin / Slack\n16:00 - 17:00"
+      }
+    ]
+  },
+  "backlog": {
+    "stripY0": 510,
+    "stripH": 230,
+    "labelX": 60,
+    "labelW": 150,
+    "slotX0": 230,
+    "slotStep": 175,
+    "cols": 4,
+    "rowY": [
+      15,
+      120
+    ],
+    "blanksPerStrip": 4
+  },
+  "kanban": {
+    "cols": {
+      "todo": "To Do",
+      "inprogress": "In Progress  (WIP 3)",
+      "qa": "QA",
+      "done": "Done"
+    },
+    "colX0": 1010,
+    "colStep": 340,
+    "colW": 330,
+    "lanes": {
+      "must": {
+        "y": 545,
+        "h": 775,
+        "label": "MUST HAVE",
+        "stroke": "#e03131"
+      },
+      "rest": {
+        "y": 1340,
+        "h": 780,
+        "label": "REST",
+        "stroke": "#868e96"
+      }
+    },
+    "slotStep": 165,
+    "slotsPerRow": 2,
+    "rowY0": 45,
+    "rowStep": 100
+  },
+  "icebox": {
+    "slotX0": 60,
+    "slotStep": 175,
+    "cols": 13,
+    "rowY": [
+      2230,
+      2335
+    ],
+    "label": "Icebox  -  outdated or free-floating tickets. Review on Friday. Drop after 4 weeks or move back to Backlog."
+  },
+  "title": "My Board"
+}

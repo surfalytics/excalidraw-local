@@ -1,0 +1,6 @@
+[submodule "excalidraw"]
+	path = excalidraw
+	url = https://github.com/surfalytics/excalidraw.git
+[submodule "mcp_excalidraw"]
+	path = mcp_excalidraw
+	url = https://github.com/surfalytics/mcp_excalidraw.git
