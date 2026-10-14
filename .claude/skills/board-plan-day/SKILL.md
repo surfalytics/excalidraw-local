@@ -8,7 +8,7 @@ description: Morning planning on the personal Kanban board. Picks the Big 3 for 
 Canvas CLI: `node mcp_excalidraw/dist/bin.js <cmd>` with `EXPRESS_SERVER_URL=http://127.0.0.1:3456`. Layout numbers: `board/layout.json`.
 
 1. Read the board: `describe`. Classify every `task-*` sticky by position using `layout.json`:
-   - column: by x against `kanban.colX0 + i * colStep`
+   - column: by x against `kanban.colX0 + i * colStep` (To Do, In Progress, QA); x inside `zones.done` means finished
    - lane: y inside `kanban.lanes.must` or `kanban.lanes.rest`
    - backlog strip: y inside `backlog.stripY0 + i * stripH`
 2. Clear yesterday: delete any `today-*-copy` stickies in the Today slots, all parts: `today-n-copy`, `-body`, `-flap`, `-label`. Leave the slots and time blocks.

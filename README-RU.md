@@ -27,7 +27,7 @@ Claude Code  --MCP-->  mcp_excalidraw  --HTTP-->  canvas server :3456  <--WebKit
 
 ## Личная Kanban-доска
 
-Тот же canvas работает как доска задач. Одна доска для всех компаний и личных дел, цвет на категорию, полосы Backlog, дорожка Must Have через To Do / In Progress / QA / Done, зона Today с Big 3 и цели на неделю.
+Тот же canvas работает как доска задач. Одна доска для всех компаний и личных дел, цвет на категорию, полосы Backlog, дорожка Must Have через To Do / In Progress / QA, полосы Backlog слева, полосы Done справа, зона Today с Big 3 и цели на неделю.
 
 ![Kanban-доска](diagrams-examples/board.png)
 

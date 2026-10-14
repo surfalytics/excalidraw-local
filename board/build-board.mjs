@@ -48,24 +48,24 @@ for (const [i, b] of L.today.blocks.entries())
   els.push({ id: `today-block-${i + 1}`, type: "rectangle", x: b.x, y: L.today.slotY, width: 240, height: S.h,
              backgroundColor: "#fff3bf", strokeColor: "#f08c00", roughness: 0, text: b.label, fontSize: 14, locked: true });
 
-// Backlog
-zone("zone-backlog", L.zones.backlog, "#495057", "#f8f9fa");
-text("zone-backlog-l", L.zones.backlog.x + 20, L.zones.backlog.y + 12, `Backlog  -  one strip per company, up to ${L.backlog.maxPerStrip} each, prune at ${L.backlog.pruneAt}`, 20, "#212529", 900);
-Object.entries(L.companies).forEach(([key, c], i) => {
-  const y = L.backlog.stripY0 + i * L.backlog.stripH;
-  els.push({ id: `strip-${key}`, type: "rectangle", x: L.zones.backlog.x + 10, y, width: L.zones.backlog.w - 20, height: L.backlog.stripH - 10,
-             strokeColor: c.stroke, strokeStyle: "dashed", roughness: 0, locked: true });
-  els.push({ id: `strip-${key}-label`, type: "rectangle", x: L.backlog.labelX, y: y + Math.round((L.backlog.stripH - 10 - S.h) / 2), width: L.backlog.labelW, height: S.h,
-             backgroundColor: c.fill, strokeColor: c.stroke, roughness: 0, text: c.name, fontSize: 16, locked: true });
-  // Blank stickies: double-click one in the app and type. add-task.mjs reuses them.
-  for (let b = 0; b < L.backlog.blanksPerStrip; b++)
-    els.push(...stickyElements({ id: `blank-${key}-${b + 1}`, x: L.backlog.slotX0 + b * L.backlog.slotStep, y: y + L.backlog.rowY[0],
-                                 w: S.w, h: S.h, fill: c.fill }));
-});
-
-// Icebox
-zone("zone-icebox", L.zones.icebox, "#868e96", "#f1f3f5");
-text("zone-icebox-l", L.zones.icebox.x + 20, L.zones.icebox.y + 12, L.icebox.label, 18, "#495057", 2000);
+// Strips: Backlog (left, with blank stickies) and Done (right, empty)
+function strips(zoneKey, cfg, label, withBlanks) {
+  const Z = L.zones[zoneKey];
+  zone(`zone-${zoneKey}`, Z, "#495057", "#f8f9fa");
+  text(`zone-${zoneKey}-l`, Z.x + 20, Z.y + 12, label, 20, "#212529", 900);
+  Object.entries(L.companies).forEach(([key, c], i) => {
+    const y = cfg.stripY0 + i * cfg.stripH;
+    const pre = zoneKey === "backlog" ? "strip" : `${zoneKey}-strip`;
+    els.push({ id: `${pre}-${key}`, type: "rectangle", x: Z.x + 10, y, width: Z.w - 20, height: cfg.stripH - 10,
+               strokeColor: c.stroke, strokeStyle: "dashed", roughness: 0, locked: true });
+    els.push({ id: `${pre}-${key}-label`, type: "rectangle", x: cfg.labelX, y: y + Math.round((cfg.stripH - 10 - S.h) / 2), width: cfg.labelW, height: S.h,
+               backgroundColor: c.fill, strokeColor: c.stroke, roughness: 0, text: c.name, fontSize: 16, locked: true });
+    if (withBlanks) for (let b = 0; b < cfg.blanksPerStrip; b++)
+      els.push(...stickyElements({ id: `blank-${key}-${b + 1}`, x: cfg.slotX0 + b * cfg.slotStep, y: y + cfg.rowY[0], w: S.w, h: S.h, fill: c.fill }));
+  });
+}
+strips("backlog", L.backlog, `Backlog  -  one strip per company, up to ${L.backlog.maxPerStrip} each, prune at ${L.backlog.pruneAt}`, true);
+strips("done", L.done, L.done.label, false);
 
 // Kanban
 zone("zone-kanban", L.zones.kanban, "#495057", "#ffffff");

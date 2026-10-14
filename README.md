@@ -29,7 +29,7 @@ What Claude did under the hood: created about 50 elements in one batch, took a h
 
 ## Personal Kanban board
 
-The same canvas also works as a task board. One board for every company and personal life, color per category, Backlog strips, a Must Have lane across To Do / In Progress / QA / Done, a Today area with the Big 3, and weekly goals.
+The same canvas also works as a task board. One board for every company and personal life, color per category, Backlog strips, a Must Have lane across To Do / In Progress / QA, Backlog strips on the left, Done strips on the right, a Today area with the Big 3, and weekly goals.
 
 ![Kanban board](diagrams-examples/board.png)
 

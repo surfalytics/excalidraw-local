@@ -44,59 +44,65 @@
     }
   },
   "zones": {
-    "week": {
+    "backlog": {
       "x": 40,
+      "y": 120,
+      "w": 1680,
+      "h": 3160
+    },
+    "week": {
+      "x": 1760,
       "y": 160,
       "w": 900,
       "h": 260
     },
     "today": {
-      "x": 980,
+      "x": 2700,
       "y": 160,
       "w": 1380,
       "h": 260
     },
-    "backlog": {
-      "x": 2420,
-      "y": 120,
-      "w": 1680,
-      "h": 3160
-    },
     "kanban": {
-      "x": 40,
+      "x": 1760,
       "y": 460,
       "w": 2320,
       "h": 1680
     },
     "icebox": {
-      "x": 40,
+      "x": 1760,
       "y": 2180,
       "w": 2320,
       "h": 330
+    },
+    "done": {
+      "x": 4140,
+      "y": 120,
+      "w": 1680,
+      "h": 3160
     }
   },
   "week": {
     "slotY": 250,
-    "slotX0": 60,
+    "slotX0": 1780,
     "slotStep": 175,
     "slots": 5
   },
   "today": {
     "slotY": 250,
-    "slotX0": 1000,
+    "slotX0": 2720,
     "slotStep": 175,
     "slots": 3,
     "blocks": [
       {
-        "x": 1560,
+        "x": 3280,
         "label": "AM focus\n9:00 - 12:00"
       },
       {
-        "x": 1820,
+        "x": 3540,
         "label": "PM focus\n13:00 - 16:00"
       },
       {
-        "x": 2080,
+        "x": 3800,
         "label": "Admin / Slack\n16:00 - 17:00"
       }
     ]
@@ -104,9 +110,9 @@
   "backlog": {
     "stripY0": 170,
     "stripH": 440,
-    "labelX": 2440,
+    "labelX": 60,
     "labelW": 150,
-    "slotX0": 2610,
+    "slotX0": 230,
     "slotStep": 175,
     "cols": 8,
     "rowY": [
@@ -123,12 +129,11 @@
     "cols": {
       "todo": "To Do",
       "inprogress": "In Progress  (WIP 3)",
-      "qa": "QA",
-      "done": "Done"
+      "qa": "QA"
     },
-    "colX0": 70,
-    "colStep": 580,
-    "colW": 570,
+    "colX0": 1790,
+    "colStep": 773,
+    "colW": 760,
     "lanes": {
       "must": {
         "y": 545,
@@ -144,12 +149,12 @@
       }
     },
     "slotStep": 175,
-    "slotsPerRow": 3,
+    "slotsPerRow": 4,
     "rowY0": 45,
     "rowStep": 100
   },
   "icebox": {
-    "slotX0": 60,
+    "slotX0": 1780,
     "slotStep": 175,
     "cols": 13,
     "rowY": [
@@ -158,5 +163,21 @@
     ],
     "label": "Icebox  -  outdated or free-floating tickets. Review on Friday. Drop after 4 weeks or move back to Backlog."
   },
-  "title": "My Board"
+  "title": "My Board",
+  "done": {
+    "stripY0": 170,
+    "stripH": 440,
+    "labelX": 4160,
+    "labelW": 150,
+    "slotX0": 4330,
+    "slotStep": 175,
+    "cols": 8,
+    "rowY": [
+      15,
+      120,
+      225,
+      330
+    ],
+    "label": "Done  -  finished tickets by company. Archived and cleared on Friday"
+  }
 }

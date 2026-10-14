@@ -40,6 +40,13 @@ function slots() {
       out.push({ x: L.backlog.slotX0 + cx * L.backlog.slotStep, y: y0 + ry });
     return out;
   }
+  if (col === "done") {
+    const i = Object.keys(L.companies).indexOf(company);
+    const y0 = L.done.stripY0 + i * L.done.stripH;
+    for (const ry of L.done.rowY) for (let cx = 0; cx < L.done.cols; cx++)
+      out.push({ x: L.done.slotX0 + cx * L.done.slotStep, y: y0 + ry });
+    return out;
+  }
   if (col === "icebox") {
     for (const ry of L.icebox.rowY) for (let cx = 0; cx < L.icebox.cols; cx++)
       out.push({ x: L.icebox.slotX0 + cx * L.icebox.slotStep, y: ry });
@@ -77,4 +84,4 @@ if (blank) spawnSync("node", [cli, "delete", blank.id, ...PART_SUFFIXES.map(sfx 
 const r = spawnSync("node", [cli, "add"],
                     { input: JSON.stringify(els), env: { ...process.env, EXPRESS_SERVER_URL: url }, encoding: "utf8" });
 if (r.status !== 0) { console.error(r.stderr || r.stdout); process.exit(1); }
-console.log(JSON.stringify({ id, company: c.name, col, lane: col === "backlog" ? null : lane, x: free.x, y: free.y, title: args.title }));
+console.log(JSON.stringify({ id, company: c.name, col, lane: ["backlog","done","icebox"].includes(col) ? null : lane, x: free.x, y: free.y, title: args.title }));
