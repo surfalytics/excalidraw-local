@@ -33,7 +33,7 @@ for (const [key, c] of Object.entries(L.companies)) {
   text(`legend-${key}-t`, lx + 32, 38, c.name, 16, "#495057", 180);
   lx += 46 + c.name.length * 9.5 + 20;
 }
-text("rules", 40, 110, "Rules:  Big 3 every morning   |   WIP 3 in In Progress   |   max 5 in Must Have To Do   |   new tasks go to Backlog   |   Friday review: archive Done, set 3-5 weekly goals", 14, "#868e96", 2300);
+text("rules", 40, 78, "Rules:  Big 3 every morning   |   WIP 3 in In Progress   |   max 5 in Must Have To Do   |   new tasks go to Backlog   |   Friday review: archive Done, set 3-5 weekly goals", 14, "#868e96", 2300);
 
 // This Week
 zone("zone-week", L.zones.week, "#495057", "#f8f9fa");
