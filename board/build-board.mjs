@@ -19,7 +19,7 @@ const zone = (id, z, stroke, fill) =>
   els.push({ id, type: "rectangle", x: z.x, y: z.y, width: z.w, height: z.h,
              backgroundColor: fill, strokeColor: stroke, strokeStyle: "dashed", roughness: 0, locked: true });
 const text = (id, x, y, t, size = 20, color = "#343a40", w = 400) =>
-  els.push({ id, type: "text", x, y, width: w, height: size * 1.4, text: t, fontSize: size, strokeColor: color, locked: true });
+  els.push({ id, type: "text", x, y, width: w, height: size * 1.4, text: t, fontSize: size, strokeColor: color, locked: true, autoResize: true });
 const slot = (id, x, y, label) =>
   els.push({ id, type: "rectangle", x, y, width: S.w, height: S.h, strokeColor: "#adb5bd",
              strokeStyle: "dotted", roughness: 0, locked: true, ...(label ? { text: label, fontSize: 12, strokeColor: "#868e96" } : {}) });
