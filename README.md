@@ -19,11 +19,11 @@ Claude Code  --MCP-->  mcp_excalidraw  --HTTP-->  canvas server :3456  <--WebKit
 
 One prompt to Claude Code, drawn live on the canvas through MCP:
 
-> Draw a typical data engineering platform in Excalidraw: sources, ingestion, Snowflake with RAW, STAGING, INTERMEDIATE and MARTS layers, dbt, Airflow orchestration, BI, ML and AI consumers, and data quality. Then export it to `diagrams/`.
+> Draw a typical data engineering platform in Excalidraw: sources, ingestion, Snowflake with RAW, STAGING, INTERMEDIATE and MARTS layers, dbt, Airflow orchestration, BI, ML and AI consumers, and data quality. Then export it to `diagrams-examples/`.
 
-![Data platform architecture](diagrams/data-platform-architecture.png)
+![Data platform architecture](diagrams-examples/data-platform-architecture.png)
 
-Files: [`diagrams/data-platform-architecture.excalidraw`](diagrams/data-platform-architecture.excalidraw) (editable) and the PNG above.
+Files: [`diagrams-examples/data-platform-architecture.excalidraw`](diagrams-examples/data-platform-architecture.excalidraw) (editable) and the PNG above.
 
 What Claude did under the hood: created about 50 elements in one batch, took a headless screenshot, saw two problems (a stray label and arrows crossing a zone), fixed them, and exported. You can then edit the result by hand in the app.
 
@@ -31,7 +31,7 @@ What Claude did under the hood: created about 50 elements in one batch, took a h
 
 The same canvas also works as a task board. One board for every company and personal life, color per category, Backlog strips, a Must Have lane across To Do / In Progress / QA / Done, a Today area with the Big 3, and weekly goals.
 
-![Kanban board](diagrams/board.png)
+![Kanban board](diagrams-examples/board.png)
 
 - Add a task from Claude Code: "add task Fix dbt snapshot for Project 1, size M". Or `node board/add-task.mjs --company p1 --title "Fix dbt snapshot" --size M`.
 - `/board-plan-day` every morning picks the Big 3. `/board-week-review` on Friday archives Done and sets next week's goals.
@@ -141,7 +141,8 @@ Keep the repo outside `~/Desktop`, `~/Documents`, and `~/Downloads`. macOS block
 | `mcp_excalidraw/` | Submodule. MCP server and live canvas. Fork of [yctimlin/mcp_excalidraw](https://github.com/yctimlin/mcp_excalidraw) |
 | `excalidraw/` | Submodule. Excalidraw source. Fork of [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw). Not needed at runtime |
 | `canvas-data/` | Live canvas state. Git-ignored |
-| `diagrams/` | Saved `.excalidraw` files |
+| `diagrams/` | Your personal diagrams and board archives. Git-ignored |
+| `diagrams-examples/` | Sample diagrams shown in this README |
 | `setup.sh` | One-time install |
 | `update.sh` | Pull submodules and rebuild |
 

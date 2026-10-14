@@ -17,11 +17,11 @@ Claude Code  --MCP-->  mcp_excalidraw  --HTTP-->  canvas server :3456  <--WebKit
 
 Один промпт в Claude Code. Диаграмма рисуется на canvas через MCP:
 
-> Нарисуй типичную платформу для data engineering в Excalidraw: источники, ingestion, Snowflake со слоями RAW, STAGING, INTERMEDIATE и MARTS, dbt, оркестрация в Airflow, потребители BI, ML и AI, контроль качества данных. Экспортируй в `diagrams/`.
+> Нарисуй типичную платформу для data engineering в Excalidraw: источники, ingestion, Snowflake со слоями RAW, STAGING, INTERMEDIATE и MARTS, dbt, оркестрация в Airflow, потребители BI, ML и AI, контроль качества данных. Экспортируй в `diagrams-examples/`.
 
-![Архитектура дата-платформы](diagrams/data-platform-architecture.png)
+![Архитектура дата-платформы](diagrams-examples/data-platform-architecture.png)
 
-Файлы: [`diagrams/data-platform-architecture.excalidraw`](diagrams/data-platform-architecture.excalidraw) (редактируемый) и PNG выше.
+Файлы: [`diagrams-examples/data-platform-architecture.excalidraw`](diagrams-examples/data-platform-architecture.excalidraw) (редактируемый) и PNG выше.
 
 Что Claude сделал внутри: создал около 50 элементов одной командой, снял скриншот без браузера, увидел две проблемы (лишняя надпись и стрелки через зону), исправил и экспортировал. Дальше результат можно править руками в приложении.
 
@@ -29,7 +29,7 @@ Claude Code  --MCP-->  mcp_excalidraw  --HTTP-->  canvas server :3456  <--WebKit
 
 Тот же canvas работает как доска задач. Одна доска для всех компаний и личных дел, цвет на категорию, полосы Backlog, дорожка Must Have через To Do / In Progress / QA / Done, зона Today с Big 3 и цели на неделю.
 
-![Kanban-доска](diagrams/board.png)
+![Kanban-доска](diagrams-examples/board.png)
 
 - Добавить задачу из Claude Code: «add task Fix dbt snapshot for Project 1, size M». Или `node board/add-task.mjs --company p1 --title "Fix dbt snapshot" --size M`.
 - `/board-plan-day` каждое утро выбирает Big 3. `/board-week-review` в пятницу архивирует Done и ставит цели на следующую неделю.
@@ -139,7 +139,8 @@ cd excalidraw-local
 | `mcp_excalidraw/` | Сабмодуль. MCP-сервер и живой canvas. Форк [yctimlin/mcp_excalidraw](https://github.com/yctimlin/mcp_excalidraw) |
 | `excalidraw/` | Сабмодуль. Исходники Excalidraw. Форк [excalidraw/excalidraw](https://github.com/excalidraw/excalidraw). Для работы не нужен |
 | `canvas-data/` | Состояние canvas. В git не попадает |
-| `diagrams/` | Сохранённые `.excalidraw` файлы |
+| `diagrams/` | Личные диаграммы и архивы доски. В git не попадает |
+| `diagrams-examples/` | Примеры диаграмм из этого README |
 | `setup.sh` | Разовая установка |
 | `update.sh` | Обновить сабмодули и пересобрать |
 

@@ -11,7 +11,8 @@ Native macOS Excalidraw app plus an MCP server so Claude Code can draw on it. Se
 | `mcp_excalidraw/` | Submodule. Upstream fork. Do not edit here. Built output in `dist/`. |
 | `excalidraw/` | Submodule. Upstream fork. Do not edit here. Not used at runtime. |
 | `canvas-data/` | Live canvas state. Git-ignored. |
-| `diagrams/` | Saved `.excalidraw` files that do not belong to a code project. |
+| `diagrams/` | Personal diagrams and board archives. Git-ignored. |
+| `diagrams-examples/` | Sample diagrams for the README. Committed. |
 | `setup.sh` | One-time install. Registers the `excalidraw` MCP server in Claude Code at user scope. |
 | `update.sh` | Pull submodules and rebuild. |
 

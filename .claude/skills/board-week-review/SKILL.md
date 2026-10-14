@@ -16,6 +16,6 @@ Canvas CLI: `node mcp_excalidraw/dist/bin.js <cmd>` with `EXPRESS_SERVER_URL=htt
    - delete `today-*-copy` elements
 4. Ask two things in one message: what to do with each unfinished Must Have task (keep, move to Rest, drop), and the 3 to 5 goals for next week.
 5. Apply the answers. Write each goal as a text-only sticky in a `goal-slot-<n>` position: id `goal-<n>`, type rectangle, white fill, stroke `#495057`, text = goal, fontSize 14. Delete old `goal-*` stickies first.
-6. `screenshot`, check, then reply with: archive path, what was cleared, next week's goals. Suggest a commit of `diagrams/board-archive/`.
+6. `screenshot`, check, then reply with: archive path, what was cleared, next week's goals. The archive folder is git-ignored; it stays on this machine.
 
 Stale Backlog tasks go to the Icebox: `node board/add-task.mjs --company <key> --title "<same text>" --col icebox`, then delete the original and its label. Never delete Backlog or Icebox stickies without the user's confirmation.

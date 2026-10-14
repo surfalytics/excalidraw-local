@@ -9,3 +9,6 @@ canvas-data/
 
 # private board config (real project names)
 board/layout.local.json
+
+# personal diagrams and board archives (private)
+diagrams/
