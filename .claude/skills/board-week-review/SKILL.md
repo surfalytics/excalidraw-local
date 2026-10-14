@@ -8,7 +8,7 @@ description: Friday review of the personal Kanban board. Summarizes Done per com
 Canvas CLI: `node mcp_excalidraw/dist/bin.js <cmd>` with `EXPRESS_SERVER_URL=http://127.0.0.1:3456`. Layout numbers: `board/layout.json`. Week id: `YYYY-WW` using the ISO week of today.
 
 1. Read the board with `describe` and classify `task-*` stickies by column, lane, and company color (`backgroundColor` matches `layout.json` companies).
-2. Report, as a table: Done count per company, unfinished Must Have tasks, In Progress count, Backlog strips with more than 8 stickies.
+2. Report, as a table: Done count per company, unfinished Must Have tasks, In Progress count, Backlog strips with more than 24 stickies.
 3. Archive, in this order:
    - `snapshot save week-YYYY-WW`
    - `export --out diagrams/board-archive/week-YYYY-WW.excalidraw`

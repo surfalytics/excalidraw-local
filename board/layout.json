@@ -57,15 +57,15 @@
       "h": 260
     },
     "backlog": {
-      "x": 40,
-      "y": 460,
-      "w": 900,
-      "h": 1680
+      "x": 2420,
+      "y": 120,
+      "w": 1680,
+      "h": 3160
     },
     "kanban": {
-      "x": 980,
+      "x": 40,
       "y": 460,
-      "w": 1380,
+      "w": 2320,
       "h": 1680
     },
     "icebox": {
@@ -102,18 +102,22 @@
     ]
   },
   "backlog": {
-    "stripY0": 510,
-    "stripH": 230,
-    "labelX": 60,
+    "stripY0": 170,
+    "stripH": 440,
+    "labelX": 2440,
     "labelW": 150,
-    "slotX0": 230,
+    "slotX0": 2610,
     "slotStep": 175,
-    "cols": 4,
+    "cols": 8,
     "rowY": [
       15,
-      120
+      120,
+      225,
+      330
     ],
-    "blanksPerStrip": 4
+    "blanksPerStrip": 8,
+    "maxPerStrip": 32,
+    "pruneAt": 24
   },
   "kanban": {
     "cols": {
@@ -122,9 +126,9 @@
       "qa": "QA",
       "done": "Done"
     },
-    "colX0": 1010,
-    "colStep": 340,
-    "colW": 330,
+    "colX0": 70,
+    "colStep": 580,
+    "colW": 570,
     "lanes": {
       "must": {
         "y": 545,
@@ -139,8 +143,8 @@
         "stroke": "#868e96"
       }
     },
-    "slotStep": 165,
-    "slotsPerRow": 2,
+    "slotStep": 175,
+    "slotsPerRow": 3,
     "rowY0": 45,
     "rowStep": 100
   },

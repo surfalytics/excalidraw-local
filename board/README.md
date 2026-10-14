@@ -8,9 +8,9 @@ One Excalidraw board for all work and personal tasks. Drawn on the live canvas. 
 |---|---|
 | **This Week** (top left) | 3 to 5 goals for the week. Set on Friday for next week. |
 | **Today** (top right) | Big 3 for today, plus three time blocks. Filled every morning. |
-| **Backlog** (bottom left) | One strip per company. Every new task lands here first. Max 8 per strip. Each strip starts with 4 blank Post-its from the sticky-note library pack: double-click one and type. |
+| **Backlog** (right side) | One strip per company. Every new task lands here first. Up to 32 per strip, prune at 24. Each strip starts with 8 blank Post-its from the sticky-note library pack: double-click one and type. |
 | **Icebox** (bottom) | Outdated or free-floating tickets. Review on Friday. Drop after 4 weeks or move back to Backlog. |
-| **Board** (bottom right) | To Do, In Progress (WIP 3), QA, Done. Two lanes across all columns: **Must Have** on top, **Rest** below. |
+| **Board** (center) | To Do, In Progress (WIP 3), QA, Done. Two lanes across all columns: **Must Have** on top, **Rest** below. |
 
 Colors: Project 1 yellow, Project 2 blue, Project 3 red, Project 4 grey, Project 5 green, Project 6 orange, Personal purple. The legend is in the header.
 
@@ -56,7 +56,7 @@ The script reuses a blank sticky if one sits in the next free slot. A blank you 
 1. Count Done per company. Note what was finished.
 2. Archive: snapshot the canvas, export to `diagrams/board-archive/week-YYYY-WW.excalidraw`, clear Done.
 3. List unfinished Must Have tasks. Decide: keep, move to Rest, or drop.
-4. Prune Backlog strips with more than 8 stickies. Move stale ones to the Icebox. Drop Icebox tickets older than 4 weeks.
+4. Prune Backlog strips with more than 24 stickies. Move stale ones to the Icebox. Drop Icebox tickets older than 4 weeks.
 5. Write 3 to 5 goals for next week in This Week.
 
 ## Rules

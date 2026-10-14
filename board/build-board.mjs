@@ -50,12 +50,12 @@ for (const [i, b] of L.today.blocks.entries())
 
 // Backlog
 zone("zone-backlog", L.zones.backlog, "#495057", "#f8f9fa");
-text("zone-backlog-l", L.zones.backlog.x + 20, L.zones.backlog.y + 12, "Backlog  -  one strip per company, newest first", 20, "#212529");
+text("zone-backlog-l", L.zones.backlog.x + 20, L.zones.backlog.y + 12, `Backlog  -  one strip per company, up to ${L.backlog.maxPerStrip} each, prune at ${L.backlog.pruneAt}`, 20, "#212529", 900);
 Object.entries(L.companies).forEach(([key, c], i) => {
   const y = L.backlog.stripY0 + i * L.backlog.stripH;
   els.push({ id: `strip-${key}`, type: "rectangle", x: L.zones.backlog.x + 10, y, width: L.zones.backlog.w - 20, height: L.backlog.stripH - 10,
              strokeColor: c.stroke, strokeStyle: "dashed", roughness: 0, locked: true });
-  els.push({ id: `strip-${key}-label`, type: "rectangle", x: L.backlog.labelX, y: y + 65, width: L.backlog.labelW, height: S.h,
+  els.push({ id: `strip-${key}-label`, type: "rectangle", x: L.backlog.labelX, y: y + Math.round((L.backlog.stripH - 10 - S.h) / 2), width: L.backlog.labelW, height: S.h,
              backgroundColor: c.fill, strokeColor: c.stroke, roughness: 0, text: c.name, fontSize: 16, locked: true });
   // Blank stickies: double-click one in the app and type. add-task.mjs reuses them.
   for (let b = 0; b < L.backlog.blanksPerStrip; b++)
