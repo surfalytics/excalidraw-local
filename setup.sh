@@ -30,6 +30,7 @@ if command -v claude >/dev/null; then
     -e EXCALIDRAW_EXPORT_DIR="$HOME" \
     -e EXCALIDRAW_DATA_DIR="$ROOT/canvas-data" \
     -e EXCALIDRAW_LIBS_DIR="$ROOT/libs" \
+    -e EXCALIDRAW_SCENES_DIR="$ROOT/diagrams" \
     -- "$(command -v node)" "$ROOT/mcp_excalidraw/dist/index.js"
 else
   echo "Claude Code CLI not found. Skipped MCP registration."

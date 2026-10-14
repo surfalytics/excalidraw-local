@@ -5,6 +5,8 @@ description: Friday review of the personal Kanban board. Summarizes the Done str
 
 # Weekly review (15 minutes)
 
+First make sure the board scene is open: `curl -s http://127.0.0.1:3456/api/scenes` → if `current` is not `Board`, run `curl -s -X POST -H 'content-type: application/json' -d '{"name":"Board"}' http://127.0.0.1:3456/api/scenes/open`.
+
 Canvas CLI: `node mcp_excalidraw/dist/bin.js <cmd>` with `EXPRESS_SERVER_URL=http://127.0.0.1:3456`. Layout numbers: `board/layout.json`. Week id: `YYYY-WW` using the ISO week of today.
 
 1. Read the board with `describe` and classify `task-*` stickies by column, lane, and company color (`backgroundColor` matches `layout.json` companies).

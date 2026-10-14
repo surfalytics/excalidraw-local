@@ -5,6 +5,8 @@ description: Morning planning on the personal Kanban board. Picks the Big 3 for 
 
 # Plan the day (5 minutes)
 
+First make sure the board scene is open: `curl -s http://127.0.0.1:3456/api/scenes` → if `current` is not `Board`, run `curl -s -X POST -H 'content-type: application/json' -d '{"name":"Board"}' http://127.0.0.1:3456/api/scenes/open`.
+
 Canvas CLI: `node mcp_excalidraw/dist/bin.js <cmd>` with `EXPRESS_SERVER_URL=http://127.0.0.1:3456`. Layout numbers: `board/layout.json`.
 
 1. Read the board: `describe`. Classify every `task-*` sticky by position using `layout.json`:

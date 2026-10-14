@@ -46,3 +46,7 @@ The personal task board lives on the live canvas. Docs: `board/README.md`. Layou
 ## Library packs
 
 `libs/*.excalidrawlib` are served by the canvas (`EXCALIDRAW_LIBS_DIR`) and preloaded into the app sidebar. Stamp from scripts with `node libs/stamp.mjs` (skill `stamp`). The preload lives in our fork of `mcp_excalidraw` (commit "Serve and preload Excalidraw library packs"). Keep that patch when pulling upstream.
+
+## Scenes (diagrams sidebar)
+
+The canvas shows one scene at a time. Scenes are `.excalidraw` files in `diagrams/` (`EXCALIDRAW_SCENES_DIR`). API: `GET /api/scenes`, `POST /api/scenes/open {name}`, `POST /api/scenes {name, fromCurrent?}`, `PATCH /api/scenes/:name {name}`, `DELETE /api/scenes/:name`, `POST /api/scenes/save`. The Kanban board is the scene named `Board`. Before any board skill runs, check `GET /api/scenes` and open `Board` if it is not current. Before drawing a new diagram for the user, create a new scene for it instead of drawing over the board. The scenes feature lives in our fork of `mcp_excalidraw` (commit "Scenes: multi-diagram workspace sidebar").

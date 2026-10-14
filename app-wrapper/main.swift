@@ -146,6 +146,7 @@ final class AppDelegate: NSObject, NSApplicationDelegate, WKNavigationDelegate, 
             "HOST": "127.0.0.1",
             "EXCALIDRAW_DATA_DIR": dataDir,
             "EXCALIDRAW_LIBS_DIR": projectDir + "/libs",
+            "EXCALIDRAW_SCENES_DIR": projectDir + "/diagrams",
         ]) { $1 }
         p.currentDirectoryURL = URL(fileURLWithPath: NSHomeDirectory())
         p.standardOutput = FileHandle.nullDevice

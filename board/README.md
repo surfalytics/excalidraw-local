@@ -1,5 +1,7 @@
 # Personal Kanban board
 
+The board is the scene named **Board** in the diagrams sidebar. Open it there before working on tasks.
+
 One Excalidraw board for all work and personal tasks. Drawn on the live canvas. Moved by hand in `Excalidraw.app` or through Claude Code.
 
 ## Layout

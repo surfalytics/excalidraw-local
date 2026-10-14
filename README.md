@@ -39,6 +39,12 @@ The same canvas also works as a task board. One board for every company and pers
 
 Details and rules: [`board/README.md`](board/README.md).
 
+## Diagrams sidebar
+
+The app has a sidebar with all your diagrams, like a workspace. Each diagram is a `.excalidraw` file in `diagrams/` (private, git-ignored). Click one to open it, press + to create a new one, hover for rename and delete. The open diagram autosaves every 10 seconds, and a thumbnail is rendered on save.
+
+Drop any `.excalidraw` file into `diagrams/` and it appears in the list. Export from excalidraw.com or Excalidraw+ to bring diagrams over.
+
 ## Library packs: sticky notes and cloud icons
 
 The app loads Excalidraw library packs from `libs/` into the library sidebar on start: sticky notes, AWS, Azure, GCP icons, and technology logos. Claude can stamp them too:

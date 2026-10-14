@@ -5,6 +5,8 @@ description: Add a task sticky to the personal Kanban board on the Excalidraw ca
 
 # Add a task to the board
 
+First make sure the board scene is open: `curl -s http://127.0.0.1:3456/api/scenes` → if `current` is not `Board`, run `curl -s -X POST -H 'content-type: application/json' -d '{"name":"Board"}' http://127.0.0.1:3456/api/scenes/open`.
+
 1. Parse from the user's words:
    - `company`: a key from `board/layout.json`, or from `board/layout.local.json` if it exists (it holds the user's real project names). Read that file first and map the user's words to the closest project name. "personal", "home", "family" → `personal`.
    - `title`: rewrite as verb + object, max 6 words. Example: "the dbt snapshot thing is broken" → "Fix dbt snapshot".
