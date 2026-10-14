@@ -4,14 +4,7 @@
     "w": 160,
     "h": 90,
     "fontSize": 14,
-    "style": {
-      "fillStyle": "solid",
-      "strokeWidth": 1,
-      "strokeColor": "#343a40",
-      "roughness": 1,
-      "roundness": null,
-      "fontFamily": 1
-    }
+    "shape": "post-it (see board/sticky.mjs)"
   },
   "companies": {
     "p1": {

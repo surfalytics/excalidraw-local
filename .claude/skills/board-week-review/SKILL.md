@@ -12,7 +12,7 @@ Canvas CLI: `node mcp_excalidraw/dist/bin.js <cmd>` with `EXPRESS_SERVER_URL=htt
 3. Archive, in this order:
    - `snapshot save week-YYYY-WW`
    - `export --out diagrams/board-archive/week-YYYY-WW.excalidraw`
-   - delete every sticky in the Done column. Deleting a `task-x` rectangle leaves its bound text `task-x-label` behind, so delete both ids
+   - delete every sticky in the Done column. A sticky is four elements: `task-x`, `task-x-body`, `task-x-flap`, `task-x-label`. Delete all four ids
    - delete `today-*-copy` elements
 4. Ask two things in one message: what to do with each unfinished Must Have task (keep, move to Rest, drop), and the 3 to 5 goals for next week.
 5. Apply the answers. Write each goal as a text-only sticky in a `goal-slot-<n>` position: id `goal-<n>`, type rectangle, white fill, stroke `#495057`, text = goal, fontSize 14. Delete old `goal-*` stickies first.

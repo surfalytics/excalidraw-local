@@ -5,6 +5,7 @@ import { readFileSync, existsSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import { spawnSync } from "node:child_process";
+import { stickyElements, PART_SUFFIXES } from "./sticky.mjs";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const L = (() => {
@@ -68,13 +69,12 @@ if (!free) { console.error(`No free slot in ${col}${col === "backlog" ? " strip 
 
 const meta = [args.size ? args.size.toUpperCase() : null, args.due ? `due ${args.due}` : null].filter(Boolean).join("  ·  ");
 const id = `task-${Date.now().toString(36)}`;
-const el = { id, type: "rectangle", x: free.x, y: free.y, width: S.w, height: S.h,
-             backgroundColor: c.fill, ...S.style, angle: (Math.random() - 0.5) * 0.06, fontSize: S.fontSize,
-             text: meta ? `${args.title}\n${meta}` : args.title };
+const els = stickyElements({ id, x: free.x, y: free.y, w: S.w, h: S.h, fill: c.fill, fontSize: S.fontSize,
+                             text: meta ? `${args.title}\n${meta}` : args.title });
 const cli = join(here, "..", "mcp_excalidraw", "dist", "bin.js");
 const blank = blanks.find(b => overlaps(free, b));
-if (blank) spawnSync("node", [cli, "delete", blank.id], { env: { ...process.env, EXPRESS_SERVER_URL: url } });
+if (blank) spawnSync("node", [cli, "delete", blank.id, ...PART_SUFFIXES.map(sfx => blank.id + sfx)], { env: { ...process.env, EXPRESS_SERVER_URL: url } });
 const r = spawnSync("node", [cli, "add"],
-                    { input: JSON.stringify([el]), env: { ...process.env, EXPRESS_SERVER_URL: url }, encoding: "utf8" });
+                    { input: JSON.stringify(els), env: { ...process.env, EXPRESS_SERVER_URL: url }, encoding: "utf8" });
 if (r.status !== 0) { console.error(r.stderr || r.stdout); process.exit(1); }
 console.log(JSON.stringify({ id, company: c.name, col, lane: col === "backlog" ? null : lane, x: free.x, y: free.y, title: args.title }));

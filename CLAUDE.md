@@ -41,7 +41,7 @@ The personal task board lives on the live canvas. Docs: `board/README.md`. Layou
 - Add a task: skill `board-add` → `node board/add-task.mjs --company <key> --title "..."`. Company keys come from `board/layout.json`, or from the git-ignored `board/layout.local.json` with your real project names.
 - Morning: skill `board-plan-day`. Friday: skill `board-week-review`.
 - Rebuild empty board: `./board/build-board.sh` (snapshots first).
-- Stickies have ids `task-*`. Board furniture is locked. Never move stickies on the board unless the user asks. They drag them in the app.
+- A sticky is a Post-it from `libs/post-it.excalidrawlib`: body, flap, and an invisible rectangle with the text, grouped. Builder: `board/sticky.mjs`. Ids: `task-x`, `task-x-body`, `task-x-flap`, `task-x-label`. Board furniture is locked. Never move stickies on the board unless the user asks. They drag them in the app.
 
 ## Library packs
 

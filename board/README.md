@@ -8,7 +8,7 @@ One Excalidraw board for all work and personal tasks. Drawn on the live canvas. 
 |---|---|
 | **This Week** (top left) | 3 to 5 goals for the week. Set on Friday for next week. |
 | **Today** (top right) | Big 3 for today, plus three time blocks. Filled every morning. |
-| **Backlog** (bottom left) | One strip per company. Every new task lands here first. Max 8 per strip. Each strip starts with 4 blank stickies: double-click one and type. |
+| **Backlog** (bottom left) | One strip per company. Every new task lands here first. Max 8 per strip. Each strip starts with 4 blank Post-its from the sticky-note library pack: double-click one and type. |
 | **Icebox** (bottom) | Outdated or free-floating tickets. Review on Friday. Drop after 4 weeks or move back to Backlog. |
 | **Board** (bottom right) | To Do, In Progress (WIP 3), QA, Done. Two lanes across all columns: **Must Have** on top, **Rest** below. |
 
@@ -69,7 +69,7 @@ The script reuses a blank sticky if one sits in the next free slot. A blank you 
 
 ## Deleting a sticky by script
 
-A sticky is two elements: the rectangle `task-x` and its text `task-x-label`. Delete both. In the app, deleting the rectangle removes both.
+A sticky is four elements: the Post-it body `task-x-body`, the folded corner `task-x-flap`, an invisible rectangle `task-x` that holds the text, and the text `task-x-label`. They share a group, so in the app one click selects the whole note and Delete removes it. From scripts, delete all four ids.
 
 ## Rebuild
 
