@@ -81,4 +81,8 @@ for (const [key, lane] of Object.entries(L.kanban.lanes)) {
   text(`lane-${key}-l`, L.zones.kanban.x + 30, lane.y + 8, lane.label, 14, lane.stroke, 200);
 }
 
+// Icebox
+zone("zone-icebox", L.zones.icebox, "#868e96", "#f1f3f5");
+text("zone-icebox-l", L.zones.icebox.x + 20, L.zones.icebox.y + 12, L.icebox.label, 18, "#495057", 2000);
+
 process.stdout.write(JSON.stringify(els, null, 1));
