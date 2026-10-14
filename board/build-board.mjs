@@ -14,6 +14,8 @@ const L = (() => {
 })();
 const S = L.sticky;
 const els = [];
+// Small alternating tilt so stickies look hand-placed.
+const tilt = i => (i % 2 ? -1 : 1) * 0.02 * (1 + (i % 3));
 const zone = (id, z, stroke, fill) =>
   els.push({ id, type: "rectangle", x: z.x, y: z.y, width: z.w, height: z.h,
              backgroundColor: fill, strokeColor: stroke, strokeStyle: "dashed", roughness: 0, locked: true });
@@ -59,7 +61,7 @@ Object.entries(L.companies).forEach(([key, c], i) => {
   // Blank stickies: double-click one in the app and type. add-task.mjs reuses them.
   for (let b = 0; b < L.backlog.blanksPerStrip; b++)
     els.push({ id: `blank-${key}-${b + 1}`, type: "rectangle", x: L.backlog.slotX0 + b * L.backlog.slotStep, y: y + L.backlog.rowY[0],
-               width: S.w, height: S.h, backgroundColor: c.fill, strokeColor: c.stroke, roughness: 0 });
+               width: S.w, height: S.h, backgroundColor: c.fill, ...S.style, angle: tilt(b) });
 });
 
 // Icebox

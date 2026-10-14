@@ -69,7 +69,7 @@ if (!free) { console.error(`No free slot in ${col}${col === "backlog" ? " strip 
 const meta = [args.size ? args.size.toUpperCase() : null, args.due ? `due ${args.due}` : null].filter(Boolean).join("  ·  ");
 const id = `task-${Date.now().toString(36)}`;
 const el = { id, type: "rectangle", x: free.x, y: free.y, width: S.w, height: S.h,
-             backgroundColor: c.fill, strokeColor: c.stroke, roughness: 0, fontSize: S.fontSize,
+             backgroundColor: c.fill, ...S.style, angle: (Math.random() - 0.5) * 0.06, fontSize: S.fontSize,
              text: meta ? `${args.title}\n${meta}` : args.title };
 const cli = join(here, "..", "mcp_excalidraw", "dist", "bin.js");
 const blank = blanks.find(b => overlaps(free, b));
