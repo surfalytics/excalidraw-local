@@ -41,7 +41,7 @@ Details and rules: [`board/README.md`](board/README.md).
 
 ## Diagrams sidebar
 
-The app has a sidebar with all your diagrams, like a workspace. Each diagram is a `.excalidraw` file in `diagrams/` (private, git-ignored). Click one to open it, press + to create a new one, hover for rename and delete. The open diagram autosaves every 10 seconds, and a thumbnail is rendered on save.
+The app has a sidebar with all your diagrams, like a workspace. Each diagram is a `.excalidraw` file in `diagrams/` (private, git-ignored). Click one to open it, press + to create a new one, hover for rename and delete. Folders are real subfolders of `diagrams/`: create one with the folder button, add a diagram inside it with the + on the folder, or move a diagram by renaming it to `folder/name`. The open diagram autosaves every 10 seconds, and a thumbnail is rendered on save.
 
 Drop any `.excalidraw` file into `diagrams/` and it appears in the list. Export from excalidraw.com or Excalidraw+ to bring diagrams over.
 
