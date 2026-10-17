@@ -73,7 +73,7 @@ text("zone-kanban-l", L.zones.kanban.x + 20, L.zones.kanban.y + 12, "Board", 20,
 Object.entries(L.kanban.cols).forEach(([key, name], i) => {
   const x = L.kanban.colX0 + i * L.kanban.colStep;
   text(`col-${key}-l`, x + 10, L.zones.kanban.y + 45, name, 18, "#212529", 320);
-  if (i > 0) els.push({ id: `col-sep-${i}`, type: "line", x: x - 5, y: L.kanban.lanes.must.y, points: [[0, 0], [0, 1575]], strokeColor: "#ced4da", roughness: 0, locked: true });
+  if (i > 0) els.push({ id: `col-sep-${i}`, type: "line", x: x - 5, y: L.kanban.lanes.must.y, points: [[0, 0], [0, L.kanban.lanes.rest.y + L.kanban.lanes.rest.h - L.kanban.lanes.must.y]], strokeColor: "#ced4da", roughness: 0, locked: true });
 });
 for (const [key, lane] of Object.entries(L.kanban.lanes)) {
   els.push({ id: `lane-${key}`, type: "rectangle", x: L.zones.kanban.x + 20, y: lane.y, width: L.zones.kanban.w - 40, height: lane.h,

@@ -1,8 +1,8 @@
 {
   "canvasUrl": "http://127.0.0.1:3456",
   "sticky": {
-    "w": 160,
-    "h": 90,
+    "w": 140,
+    "h": 140,
     "fontSize": 14,
     "shape": "post-it (see board/sticky.mjs)"
   },
@@ -48,49 +48,49 @@
       "x": 40,
       "y": 120,
       "w": 1680,
-      "h": 3160
+      "h": 4680
     },
     "week": {
       "x": 1760,
       "y": 160,
       "w": 900,
-      "h": 260
+      "h": 300
     },
     "today": {
       "x": 2700,
       "y": 160,
       "w": 1380,
-      "h": 260
+      "h": 300
     },
     "kanban": {
       "x": 1760,
-      "y": 460,
+      "y": 500,
       "w": 2320,
       "h": 1680
     },
     "icebox": {
       "x": 1760,
-      "y": 2180,
+      "y": 2220,
       "w": 2320,
-      "h": 330
+      "h": 380
     },
     "done": {
       "x": 4140,
       "y": 120,
       "w": 1680,
-      "h": 3160
+      "h": 4680
     }
   },
   "week": {
     "slotY": 250,
     "slotX0": 1780,
-    "slotStep": 175,
+    "slotStep": 160,
     "slots": 5
   },
   "today": {
     "slotY": 250,
     "slotX0": 2720,
-    "slotStep": 175,
+    "slotStep": 160,
     "slots": 3,
     "blocks": [
       {
@@ -109,17 +109,17 @@
   },
   "backlog": {
     "stripY0": 170,
-    "stripH": 440,
+    "stripH": 660,
     "labelX": 60,
     "labelW": 150,
     "slotX0": 230,
-    "slotStep": 175,
+    "slotStep": 155,
     "cols": 8,
     "rowY": [
-      15,
-      120,
-      225,
-      330
+      20,
+      175,
+      330,
+      485
     ],
     "blanksPerStrip": 8,
     "maxPerStrip": 32,
@@ -136,47 +136,47 @@
     "colW": 760,
     "lanes": {
       "must": {
-        "y": 545,
+        "y": 585,
         "h": 775,
         "label": "MUST HAVE",
         "stroke": "#e03131"
       },
       "rest": {
-        "y": 1340,
+        "y": 1380,
         "h": 780,
         "label": "REST",
         "stroke": "#868e96"
       }
     },
-    "slotStep": 175,
+    "slotStep": 155,
     "slotsPerRow": 4,
-    "rowY0": 45,
-    "rowStep": 100
+    "rowY0": 40,
+    "rowStep": 155
   },
   "icebox": {
     "slotX0": 1780,
-    "slotStep": 175,
-    "cols": 13,
+    "slotStep": 155,
+    "cols": 14,
     "rowY": [
-      2230,
-      2335
+      2265,
+      2420
     ],
     "label": "Icebox  -  outdated or free-floating tickets. Review on Friday. Drop after 4 weeks or move back to Backlog."
   },
   "title": "My Board",
   "done": {
     "stripY0": 170,
-    "stripH": 440,
+    "stripH": 660,
     "labelX": 4160,
     "labelW": 150,
     "slotX0": 4330,
-    "slotStep": 175,
+    "slotStep": 155,
     "cols": 8,
     "rowY": [
-      15,
-      120,
-      225,
-      330
+      20,
+      175,
+      330,
+      485
     ],
     "label": "Done  -  finished tickets by company. Archived and cleared on Friday"
   }
