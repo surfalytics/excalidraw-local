@@ -72,7 +72,7 @@ The script reuses a blank sticky if one sits in the next free slot. A blank you 
 
 ## Deleting a sticky by script
 
-A sticky is four elements: the Post-it body `task-x-body`, the folded corner `task-x-flap`, an invisible rectangle `task-x` that holds the text, and the text `task-x-label`. They share a group, so in the app one click selects the whole note and Delete removes it. From scripts, delete all four ids.
+A sticky is a rectangle `task-x` with bound text `task-x-label`, the same style as the Simple Sticky Notes library pack. Double-click the note to type. Deleting the rectangle in the app removes both. From scripts, delete both ids.
 
 ## Rebuild
 
