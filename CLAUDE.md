@@ -7,7 +7,7 @@ Native macOS Excalidraw app plus an MCP server so Claude Code can draw on it. Se
 | Path | What it is |
 |---|---|
 | `app-wrapper/main.swift` | Native app. Swift + WebKit. Starts `mcp_excalidraw/dist/server.js` on port 3456, shows it, stops it on quit. |
-| `app-wrapper/build.sh` | Builds `Excalidraw.app` into the repo root. The `.app` is git-ignored. |
+| `app-wrapper/build.sh` | Builds `Excalidraw.app` into the repo root. The `.app` is git-ignored. `install-app.sh` copies it to `/Applications`; the copy finds the repo through `~/Library/Application Support/Excalidraw/project-path`. |
 | `mcp_excalidraw/` | Submodule. Upstream fork. Do not edit here. Built output in `dist/`. |
 | `excalidraw/` | Submodule. Upstream fork. Do not edit here. Not used at runtime. |
 | `canvas-data/` | Live canvas state. Git-ignored. |

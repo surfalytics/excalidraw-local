@@ -48,7 +48,7 @@
       "x": 40,
       "y": 120,
       "w": 1680,
-      "h": 4680
+      "h": 0
     },
     "week": {
       "x": 1760,
@@ -78,7 +78,7 @@
       "x": 4140,
       "y": 120,
       "w": 1680,
-      "h": 4680
+      "h": 0
     }
   },
   "week": {
@@ -123,7 +123,8 @@
     ],
     "blanksPerStrip": 8,
     "maxPerStrip": 32,
-    "pruneAt": 24
+    "pruneAt": 24,
+    "note": "zone heights 0 = computed from the number of companies"
   },
   "kanban": {
     "cols": {
@@ -165,19 +166,11 @@
   },
   "title": "My Board",
   "done": {
-    "stripY0": 170,
-    "stripH": 660,
-    "labelX": 4160,
-    "labelW": 150,
-    "slotX0": 4330,
+    "slotX0": 4160,
     "slotStep": 155,
-    "cols": 8,
-    "rowY": [
-      20,
-      175,
-      330,
-      485
-    ],
-    "label": "Done  -  finished tickets by company. Archived and cleared on Friday"
+    "cols": 10,
+    "rowY0": 60,
+    "rowStep": 155,
+    "label": "Done  -  finished tickets. Archived and cleared on Friday"
   }
 }

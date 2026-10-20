@@ -5,8 +5,17 @@ import WebKit
 // Starts a static file server, shows the page in a WKWebView, stops the server on quit.
 
 let port = 3456
-// The app lives in the repo root next to mcp_excalidraw/ and canvas-data/.
-let projectDir = Bundle.main.bundleURL.deletingLastPathComponent().path
+// Where the repo lives. The app can sit in the repo root or in /Applications:
+// 1. the folder next to the app bundle, 2. the path written by install-app.sh,
+// 3. ~/dev/excalidraw.
+let projectDir: String = {
+    let fm = FileManager.default
+    let hint = NSHomeDirectory() + "/Library/Application Support/Excalidraw/project-path"
+    var candidates = [Bundle.main.bundleURL.deletingLastPathComponent().path]
+    if let p = try? String(contentsOfFile: hint, encoding: .utf8) { candidates.append(p.trimmingCharacters(in: .whitespacesAndNewlines)) }
+    candidates.append(NSHomeDirectory() + "/dev/excalidraw")
+    return candidates.first { fm.fileExists(atPath: $0 + "/mcp_excalidraw/dist/server.js") } ?? candidates[0]
+}()
 let canvasServer = projectDir + "/mcp_excalidraw/dist/server.js"
 let dataDir = projectDir + "/canvas-data"
 let nodePath: String = {

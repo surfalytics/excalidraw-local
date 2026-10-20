@@ -1,6 +1,6 @@
 ---
 name: board-week-review
-description: Friday review of the personal Kanban board. Summarizes the Done strips per company, archives the week, clears them, prunes Backlog, and sets 3 to 5 goals for next week. Use when the user says "weekly review", "close the week", or runs /board-week-review.
+description: Friday review of the personal Kanban board. Summarizes the Done box per company (by color), archives the week, clears it, prunes Backlog, and sets 3 to 5 goals for next week. Use when the user says "weekly review", "close the week", or runs /board-week-review.
 ---
 
 # Weekly review (15 minutes)
@@ -14,7 +14,7 @@ Canvas CLI: `node mcp_excalidraw/dist/bin.js <cmd>` with `EXPRESS_SERVER_URL=htt
 3. Archive, in this order:
    - `snapshot save week-YYYY-WW`
    - `export --out diagrams/board-archive/week-YYYY-WW.excalidraw`
-   - delete every sticky in the Done strips on the right (x inside `zones.done`). A sticky is two elements: `task-x` and `task-x-label`. Delete both ids
+   - delete every sticky in the Done box on the right (x inside `zones.done`). A sticky is two elements: `task-x` and `task-x-label`. Delete both ids
    - delete `today-*-copy` elements
 4. Ask two things in one message: what to do with each unfinished Must Have task (keep, move to Rest, drop), and the 3 to 5 goals for next week.
 5. Apply the answers. Write each goal as a text-only sticky in a `goal-slot-<n>` position: id `goal-<n>`, type rectangle, white fill, stroke `#495057`, text = goal, fontSize 14. Delete old `goal-*` stickies first.

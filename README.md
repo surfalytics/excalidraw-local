@@ -127,7 +127,7 @@ cd excalidraw-local
 ./setup.sh
 ```
 
-Then open `Excalidraw.app`. Drag it to the Dock if you like.
+Then open `Excalidraw.app`. Drag it to the Dock if you like. To find it with Spotlight or Launchpad, run `./install-app.sh`: it copies the app to `/Applications` and remembers where this repo is.
 
 Keep the repo outside `~/Desktop`, `~/Documents`, and `~/Downloads`. macOS blocks apps launched from Finder from reading those folders.
 
@@ -150,6 +150,7 @@ Keep the repo outside `~/Desktop`, `~/Documents`, and `~/Downloads`. macOS block
 | `diagrams/` | Your personal diagrams and board archives. Git-ignored |
 | `diagrams-examples/` | Sample diagrams shown in this README |
 | `setup.sh` | One-time install |
+| `install-app.sh` | Copy the app to `/Applications` |
 | `update.sh` | Pull submodules and rebuild |
 
 ## Maintenance

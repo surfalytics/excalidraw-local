@@ -125,7 +125,7 @@ cd excalidraw-local
 ./setup.sh
 ```
 
-Потом откройте `Excalidraw.app`. Можно перетащить в Dock.
+Потом откройте `Excalidraw.app`. Можно перетащить в Dock. Чтобы приложение находилось через Spotlight и Launchpad, запустите `./install-app.sh`: он копирует приложение в `/Applications` и запоминает путь к репозиторию.
 
 Держите репозиторий вне `~/Desktop`, `~/Documents` и `~/Downloads`. macOS не даёт приложениям, запущенным из Finder, читать эти папки.
 
@@ -148,6 +148,7 @@ cd excalidraw-local
 | `diagrams/` | Личные диаграммы и архивы доски. В git не попадает |
 | `diagrams-examples/` | Примеры диаграмм из этого README |
 | `setup.sh` | Разовая установка |
+| `install-app.sh` | Скопировать приложение в `/Applications` |
 | `update.sh` | Обновить сабмодули и пересобрать |
 
 ## Обслуживание

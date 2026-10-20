@@ -41,10 +41,11 @@ function slots() {
     return out;
   }
   if (col === "done") {
-    const i = Object.keys(L.companies).indexOf(company);
-    const y0 = L.done.stripY0 + i * L.done.stripH;
-    for (const ry of L.done.rowY) for (let cx = 0; cx < L.done.cols; cx++)
-      out.push({ x: L.done.slotX0 + cx * L.done.slotStep, y: y0 + ry });
+    const n = Object.keys(L.companies).length;
+    const zoneH = L.zones.done.h || (L.backlog.stripY0 - L.zones.backlog.y) + n * L.backlog.stripH + 10;
+    const rows = Math.floor((zoneH - L.done.rowY0) / L.done.rowStep);
+    for (let r = 0; r < rows; r++) for (let cx = 0; cx < L.done.cols; cx++)
+      out.push({ x: L.done.slotX0 + cx * L.done.slotStep, y: L.zones.done.y + L.done.rowY0 + r * L.done.rowStep });
     return out;
   }
   if (col === "icebox") {
